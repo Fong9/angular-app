@@ -1,5 +1,38 @@
-Hello {{name}}, I'm {{age}} year old. <br>
-I lived in {{addrress}} <br>
-My salary {{salary}}$
+<!-- 
+Item = {{item}} <br>
+Price = {{price}}$ <br>
+Qty = {{qty}} <br>
+Discount = {{dis}}% <br>
+Total = {{price * qty}}$ <br>
+SubTotal = {{price * qty - (qty * price * dis / 100)}}$ 
+-->
 
-<router-outlet />
+<!-- 
+@if(isLoggedIn) {
+    <p style="color: green;">You're logged in!</p>
+}
+@else{
+    <p style="color: red;">You're logged out!</p>
+}
+
+<p>WEB: {{web}}</p>
+<p>MIS: {{mis}}</p>
+<p>DATA: {{data}}</p>
+------------------------- <br>
+
+Avg = {{avg}} <br>
+@if(avg >= 90 && avg < 100) {
+    <p>Grade = A</p>
+}@else if(avg >= 60 && avg < 89) {
+    <p>Grade = B</p>
+}@else if(avg  >= 50 && avg < 59) {
+    <p>Grade = C</p>
+}@else {
+    <p>Grade F</p>
+} 
+-->
+
+
+<app-hello></app-hello>
+<app-setec></app-setec>
+<router-outlet/>
