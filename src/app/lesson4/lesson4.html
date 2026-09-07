@@ -1,0 +1,19 @@
+<br>
+
+@for (i of item; track i) {
+    <div style="display: flex; gap: 12px;">
+        <div>ID: {{i.id}},</div>
+        <div>Name: {{i.name}},</div>
+    </div>
+}@empty{
+    <p>No Data</p>
+}
+
+@switch(status) {
+    @case('active') {
+        <p>Status: ដំណើរការ</p>
+    }
+    @default{
+        <p>Status: មិនដំណើរការ</p>
+    }
+}

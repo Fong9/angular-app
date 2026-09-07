@@ -14,3 +14,32 @@
 <p>
     Array: {{arr[1]}}
 </p>
+<table>
+    <thead>
+        <tr>
+            <th>id</th>
+            <th>name</th>
+            <th>age</th>
+            <th>type</th>
+        </tr>
+    </thead>
+    <tbody>
+        @for (item of studentList; track $index) {
+            <tr>
+                <td>{{ item.id }}</td>
+                <td>{{ item.name }}</td>
+                <td>{{ item.age }}</td>
+                @if(item.age >= 18 && item.age < 60) {
+                    <td>Adult</td>
+                }@else if(item.age >= 0 && item.age < 18){
+                    <td>Baby</td>
+                }@else{
+                    <td>Old</td>
+                }
+            </tr>
+        }
+        <tr>
+            <td colspan="4">Count: {{ studentList.length }}</td>
+        </tr>
+    </tbody>
+</table>
