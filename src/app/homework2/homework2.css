@@ -1,0 +1,17 @@
+.multiplication-tables {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.multiplication-column {
+    display: flex;
+    flex: 1 1 10rem;
+    flex-direction: column;
+    gap: 0.35rem;
+}
+
+.equation {
+    white-space: nowrap;
+}

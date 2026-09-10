@@ -1,5 +1,11 @@
-@for (i of num; track i;) {
-    @for (number of n; track number;) {
-       <div>{{number}} x {{i}} = {{number * i}}</div>
+<h1>Homework 2</h1>
+
+<div style="display: flex; gap: 24px">
+    @for (i of n; track i) {
+        <div style="display: column;">
+            @for (number of num; track number) {
+                <div>{{ i }} x {{ number }} = {{ number * i }}</div>
+            }
+        </div>
     }
-}
+</div>

@@ -1,0 +1,21 @@
+*{
+    font-family: poppins;
+}
+.col404, img{
+    height: 120px;
+}
+.col404{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.title{
+    font-size: 48px;
+    color: darkgoldenrod;
+}
+.text{
+    color: darkgoldenrod;
+}
