@@ -16,3 +16,4 @@ export class Code1 {
     return this.result = Number(this.val) + Number(this.val1);
   }
 }
+ 
