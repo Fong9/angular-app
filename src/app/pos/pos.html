@@ -1,10 +1,25 @@
 <div class="container-fluid">
   <div class="row">
     <div class="col-lg-8 bg-body-secondary">
-      <div class="row bg-success">
-        <div class="col-12">Menu Search</div>
+      <div class="row p-2 gap-4">
+        <!-- Card -->
+        @for (item of [1,2,3,4]; track $index) {
+          <div class="card" style="width: 18rem;">
+            <img src="pizza.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Pizza</h5>
+              <div class="counter-row">
+                <button class="btn btn-primary" (click)="decrement()">-</button>
+                <span>{{counter}}</span>
+                <button class="btn btn-primary" (click)="increment()">+</button>
+              </div>
+            </div>
+          </div>
+        }
+
       </div>
     </div>
+
     <div class="col-lg-4 bg-danger-subtle">
       <div class="row bg-danger">
         <div class="col-12">Ticket Search</div>
