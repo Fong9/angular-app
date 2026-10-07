@@ -1,27 +1,33 @@
 <div class="container-fluid">
   <div class="row">
     <div class="col-lg-8 bg-body-secondary">
-      <div class="row p-2 gap-4">
+      <div class="row p-2 g-3">
         <!-- Card -->
-        @for (item of [1,2,3,4]; track $index) {
-          <div class="card" style="width: 18rem;">
-            <img src="pizza.png" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Pizza</h5>
-              <div class="counter-row">
-                <button class="btn btn-primary" (click)="decrement()">-</button>
-                <span>{{counter}}</span>
-                <button class="btn btn-primary" (click)="increment()">+</button>
+        @for (item of items; track $index) {
+          <div class="col-4">
+            <div class="card">
+              <img [src]="item.img" class="card-img-top" style="height: 200px; object-fit: contain"/>
+              <div class="card-body d-flex flex-column gap-3">
+
+                <h5 class="card-title" [innerText]="item.productName"></h5>
+                <span>Price: {{ item.price.toFixed(2) }}$</span>
+                <span>Discount: {{ item.dis }}%</span>
+
+                <div class="counter-row d-flex gap-2 align-items-center">
+                  <button class="btn btn-primary" (click)="decrement(item)">-</button>
+                  <span>{{ item.qty }}</span>
+                  <button class="btn btn-primary" (click)="increment(item)">+</button>
+                </div>
+
               </div>
             </div>
           </div>
         }
-
       </div>
     </div>
 
     <div class="col-lg-4 bg-danger-subtle">
-      <div class="row bg-danger">
+      <div class="row-ticket bg-danger">
         <div class="col-12">Ticket Search</div>
       </div>
     </div>
