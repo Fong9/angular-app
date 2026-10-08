@@ -1,0 +1,7 @@
+.btn-cart{
+    height: 30px;
+    border: none;
+    border-radius: 8px;
+    background-color: rgb(0, 128, 0);
+    color: white;
+}

@@ -12,13 +12,7 @@
                 <h5 class="card-title" [innerText]="item.productName"></h5>
                 <span>Price: {{ item.price.toFixed(2) }}$</span>
                 <span>Discount: {{ item.dis }}%</span>
-
-                <div class="counter-row d-flex gap-2 align-items-center">
-                  <button class="btn btn-primary" (click)="decrement(item)">-</button>
-                  <span>{{ item.qty }}</span>
-                  <button class="btn btn-primary" (click)="increment(item)">+</button>
-                </div>
-
+                <button class="btn-cart" (click)="btnCart(item)">Add to Cart</button>
               </div>
             </div>
           </div>
@@ -29,6 +23,9 @@
     <div class="col-lg-4 bg-danger-subtle">
       <div class="row-ticket bg-danger">
         <div class="col-12">Ticket Search</div>
+        @for (item of items; track item.id) {
+          <img [src]="item.img" alt="">
+        }
       </div>
     </div>
   </div>

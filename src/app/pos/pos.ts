@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
   styleUrl: './pos.css',
 })
 export class Pos {
-  items = [
+  items: any[] = [
     {
       "img": 'pizza.png',
       "productName": 'Pizza',
@@ -81,5 +81,9 @@ export class Pos {
     if (item.qty > 0) {
       item.qty--;
     }
+  }
+
+  btnCart(item: any): void {
+    this.items.push(item)
   }
 }
